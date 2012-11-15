@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>MoriCJSON</title>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script>
+	$(function(){	
+		$.getJSON('/customer.json', function(data){
+			console.log(data);
+			for(var i in data){
+					$("body").append('<p>' + data[i].menu + '</p>\n')
+			}
+		});
+	});
+</script>
+</head>
+<body>
+</body>
+</html>
