@@ -1,0 +1,18 @@
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script>
+	$(function(){	
+		$.getJSON('/customer/hoge.json', function(data){
+			for(var i in data){
+					$("body").append('<p>メニュー名:' + data[i].menu_name + '</p>\n')
+					$("body").append('<p>たんぱく質:' + data[i].protein + '</p>\n')
+					$("body").append('<p>脂質:' + data[i].lipid + '</p>\n')
+					$("body").append('<p>炭水化物:' + data[i].carbohydrate + '</p>\n')
+					$("body").append('<p>カルシウム:' + data[i].calcium + '</p>\n')
+					$("body").append('<p>塩分:' + data[i].salt_equivalents + '</p>\n')
+					$("body").append('<p>カロリー:' + data[i].energy_kcal + '</p>\n')
+			}
+		});
+	});
+</script>
+<body>
+</body>
