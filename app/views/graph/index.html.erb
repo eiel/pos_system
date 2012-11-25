@@ -1,5 +1,5 @@
 <script type="text/javascript">
-window.onload = function() {
+jQuery(function() {
   var rc = new html5jp.graph.radar("sample");
   if( ! rc ) { return; }
   var items = [
@@ -10,7 +10,7 @@ window.onload = function() {
     aCap: ["安さ", "性能", "デザイン", "人気", "使いやすさ", "寿命", "軽さ", "強さ"]
   }
   rc.draw(items, params);
-};
+});
 </script>
 <div class="span2">
   mogumogu
