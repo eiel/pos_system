@@ -21,4 +21,12 @@ class CustomerController < ApplicationController
       format.json { render :json => @hoge.map(&:to_json) }
     end
   end
+
+  def graph
+    @hoge = Menu.where(:id => 1)
+    respond_to do |format|
+      format.html
+      format.json { render :json => @hoge.map(&:to_json) }
+    end
+  end
 end
